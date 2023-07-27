@@ -1,4 +1,4 @@
-# Home-made Bacon Ciper 
+# Home-made Bacon Cipher 
 
 This is a small program that implements a my variant of [Bacon’s cipher](https://en.wikipedia.org/wiki/Bacon%27s_cipher). 
 
@@ -152,4 +152,4 @@ Make sure you have [Valgrind](https://valgrind.org/) and Criterion with it's req
 
     `make && make test`
 
-- Don't try to clean the build using `make clean` as it causes the tests folder to be deleted for some reason.
+- Don't try to clean the build using `make clean` as it causes the tests folder to be deleted for some reason lol.
