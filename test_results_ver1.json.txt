@@ -1,0 +1,405 @@
+{
+  "id": "Criterion v2.4.0",
+  "passed": 65,
+  "failed": 1,
+  "errored": 0,
+  "skipped": 0,
+  "test_suites": [
+    {
+      "name": "grading_valgrind",
+      "passed": 13,
+      "failed": 0,
+      "errored": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "name": "encrypt_symbols_valgrind",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "encrypt_one_char_valgrind",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "encrypt_full_msg3_valgrind",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "encrypt_full_msg2_valgrind",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "encrypt_full_msg1_valgrind",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "encrypt_ciph_all_letters_valgrind",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "encrypt_EOM_only_valgrind",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "decrypt_symbols_valgrind",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "decrypt_partial_msg_valgrind",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "decrypt_full_msg3_valgrind",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "decrypt_full_msg2_valgrind",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "decrypt_full_msg1_valgrind",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "decrypt_eom_in_middle_valgrind",
+          "assertions": 1,
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "name": "grading_return",
+      "passed": 13,
+      "failed": 0,
+      "errored": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "name": "encrypt_symbols",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "encrypt_one_char",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "encrypt_full_msg3",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "encrypt_full_msg2",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "encrypt_full_msg1",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "encrypt_ciph_all_letters",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "encrypt_EOM_only",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "decrypt_symbols",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "decrypt_partial_msg",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "decrypt_full_msg3",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "decrypt_full_msg2",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "decrypt_full_msg1",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "decrypt_eom_in_middle",
+          "assertions": 1,
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "name": "grading_output",
+      "passed": 13,
+      "failed": 0,
+      "errored": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "name": "encrypt_symbols",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "encrypt_one_char",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "encrypt_full_msg3",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "encrypt_full_msg2",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "encrypt_full_msg1",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "encrypt_ciph_all_letters",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "encrypt_EOM_only",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "decrypt_symbols",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "decrypt_partial_msg",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "decrypt_full_msg3",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "decrypt_full_msg2",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "decrypt_full_msg1",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "decrypt_eom_in_middle",
+          "assertions": 1,
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "name": "grading_no_output",
+      "passed": 5,
+      "failed": 1,
+      "errored": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "name": "encrypt_insufficient_space",
+          "assertions": 3,
+          "status": "PASSED"
+        },
+        {
+          "name": "encrypt_ciph_all_non_letters",
+          "assertions": 3,
+          "status": "FAILED",
+          "messages": [
+            "../../../tests/grading_tests.c:154: Return value was 0, but it should have been -1."
+          ]
+        },
+        {
+          "name": "decrypt_no_EOM2",
+          "assertions": 3,
+          "status": "PASSED"
+        },
+        {
+          "name": "decrypt_no_EOM1",
+          "assertions": 3,
+          "status": "PASSED"
+        },
+        {
+          "name": "decrypt_invalid_msg",
+          "assertions": 3,
+          "status": "PASSED"
+        },
+        {
+          "name": "decrypt_empty_msg",
+          "assertions": 2,
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "name": "base_valgrind",
+      "passed": 7,
+      "failed": 0,
+      "errored": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "name": "encrypt_three_chars_valgrind",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "encrypt_full_msg_valgrind",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "encrypt_empty_string_valgrind",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "encrypt_EOM_only_valgrind",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "decrypt_three_chars_valgrind",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "decrypt_partial_msg_valgrind",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "decrypt_full_msg_valgrind",
+          "assertions": 1,
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "name": "base_return",
+      "passed": 7,
+      "failed": 0,
+      "errored": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "name": "encrypt_three_chars",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "encrypt_full_msg",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "encrypt_empty_string",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "encrypt_EOM_only",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "decrypt_three_chars",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "decrypt_partial_msg",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "decrypt_full_msg",
+          "assertions": 1,
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "name": "base_output",
+      "passed": 7,
+      "failed": 0,
+      "errored": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "name": "encrypt_three_chars",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "encrypt_full_msg",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "encrypt_empty_string",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "encrypt_EOM_only",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "decrypt_three_chars",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "decrypt_partial_msg",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "decrypt_full_msg",
+          "assertions": 1,
+          "status": "PASSED"
+        }
+      ]
+    }
+  ]
+}

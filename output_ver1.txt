@@ -1,0 +1,199 @@
+src/bacon.c: In function ‘decrypt’:
+src/bacon.c:61:43: warning: passing argument 1 of ‘char_counter’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+   61 |     int encoded_char_count = char_counter(ciphertext); // stores the number of characters encrypted in cipher using bacon code
+      |                                           ^~~~~~~~~~
+src/bacon.c:6:24: note: expected ‘char *’ but argument is of type ‘const char *’
+    6 | int char_counter(char *c_txt);
+      |                  ~~~~~~^~~~~
+[----] Criterion v2.4.0
+[====] Running 7 tests from base_output:
+[RUN ] base_output::decrypt_full_msg
+[----]   A full plaintext message was encrypted.
+[PASS] base_output::decrypt_full_msg: (0.00s)
+[RUN ] base_output::decrypt_partial_msg
+[----]   The plaintext is not large enough to accommodate the entire ciphertext.
+[PASS] base_output::decrypt_partial_msg: (0.00s)
+[RUN ] base_output::decrypt_three_chars
+[----]   Ciphertext string encoded only three characters.
+[PASS] base_output::decrypt_three_chars: (0.00s)
+[RUN ] base_output::encrypt_EOM_only
+[----]   Ciphertext string has room only for EOM.
+[PASS] base_output::encrypt_EOM_only: (0.00s)
+[RUN ] base_output::encrypt_empty_string
+[----]   Plaintext is the empty string.
+[PASS] base_output::encrypt_empty_string: (0.00s)
+[RUN ] base_output::encrypt_full_msg
+[----]   A full plaintext message can be encrypted.
+[PASS] base_output::encrypt_full_msg: (0.00s)
+[RUN ] base_output::encrypt_three_chars
+[----]   Ciphertext string has room only for three characters.
+[PASS] base_output::encrypt_three_chars: (0.00s)
+[====] Running 7 tests from base_return:
+[RUN ] base_return::decrypt_full_msg
+[----]   A full plaintext message was encrypted.
+[PASS] base_return::decrypt_full_msg: (0.00s)
+[RUN ] base_return::decrypt_partial_msg
+[----]   A full plaintext message was encrypted.
+[PASS] base_return::decrypt_partial_msg: (0.00s)
+[RUN ] base_return::decrypt_three_chars
+[----]   Ciphertext string encoded only three characters.
+[PASS] base_return::decrypt_three_chars: (0.00s)
+[RUN ] base_return::encrypt_EOM_only
+[----]   Ciphertext string has room only for EOM.
+[PASS] base_return::encrypt_EOM_only: (0.00s)
+[RUN ] base_return::encrypt_empty_string
+[----]   Plaintext is the empty string.
+[PASS] base_return::encrypt_empty_string: (0.00s)
+[RUN ] base_return::encrypt_full_msg
+[----]   A full plaintext message can be encrypted.
+[PASS] base_return::encrypt_full_msg: (0.00s)
+[RUN ] base_return::encrypt_three_chars
+[----]   Ciphertext string has room only for three characters.
+[PASS] base_return::encrypt_three_chars: (0.00s)
+[====] Running 7 tests from base_valgrind:
+[RUN ] base_valgrind::decrypt_full_msg_valgrind
+[PASS] base_valgrind::decrypt_full_msg_valgrind: (0.53s)
+[RUN ] base_valgrind::decrypt_partial_msg_valgrind
+[PASS] base_valgrind::decrypt_partial_msg_valgrind: (0.56s)
+[RUN ] base_valgrind::decrypt_three_chars_valgrind
+[PASS] base_valgrind::decrypt_three_chars_valgrind: (0.70s)
+[RUN ] base_valgrind::encrypt_EOM_only_valgrind
+[PASS] base_valgrind::encrypt_EOM_only_valgrind: (0.63s)
+[RUN ] base_valgrind::encrypt_empty_string_valgrind
+[PASS] base_valgrind::encrypt_empty_string_valgrind: (0.72s)
+[RUN ] base_valgrind::encrypt_full_msg_valgrind
+[PASS] base_valgrind::encrypt_full_msg_valgrind: (0.56s)
+[RUN ] base_valgrind::encrypt_three_chars_valgrind
+[PASS] base_valgrind::encrypt_three_chars_valgrind: (0.56s)
+[====] Running 6 tests from grading_no_output:
+[RUN ] grading_no_output::decrypt_empty_msg
+[----]   Plaintext is an empty string.
+[PASS] grading_no_output::decrypt_empty_msg: (0.55s)
+[RUN ] grading_no_output::decrypt_invalid_msg
+[----]   Ciphertext contains invalid Bacon codes.
+[PASS] grading_no_output::decrypt_invalid_msg: (0.50s)
+[RUN ] grading_no_output::decrypt_no_EOM1
+[----]   No EOM marker present in ciphertext.
+[PASS] grading_no_output::decrypt_no_EOM1: (0.60s)
+[RUN ] grading_no_output::decrypt_no_EOM2
+[----]   No EOM present in ciphertext, but six consecutive uppercase letters are present.
+[PASS] grading_no_output::decrypt_no_EOM2: (0.56s)
+[RUN ] grading_no_output::encrypt_ciph_all_non_letters
+[----]   Ciphertext contains only non-letters
+[----] ../../../tests/grading_tests.c:154: Assertion Failed
+[----]   
+[----]   Return value was 0, but it should have been -1.
+[----]   
+[FAIL] grading_no_output::encrypt_ciph_all_non_letters: (0.57s)
+[RUN ] grading_no_output::encrypt_insufficient_space
+[----]   Ciphertext string too small to store the EOM marker.
+[PASS] grading_no_output::encrypt_insufficient_space: (0.55s)
+[====] Running 13 tests from grading_output:
+[RUN ] grading_output::decrypt_eom_in_middle
+[----]   EOM is in the middle of the ciphertext, with another one later in the ciphertext
+[PASS] grading_output::decrypt_eom_in_middle: (0.00s)
+[RUN ] grading_output::decrypt_full_msg1
+[----]   A full plaintext message was encrypted.
+[PASS] grading_output::decrypt_full_msg1: (0.00s)
+[RUN ] grading_output::decrypt_full_msg2
+[----]   A full plaintext message was encrypted.
+[PASS] grading_output::decrypt_full_msg2: (0.00s)
+[RUN ] grading_output::decrypt_full_msg3
+[----]   A full plaintext message was encrypted. Ciphertext starts with non-letters.
+[PASS] grading_output::decrypt_full_msg3: (0.00s)
+[RUN ] grading_output::decrypt_partial_msg
+[----]   The plaintext is not large enough to accommodate the entire ciphertext.
+[PASS] grading_output::decrypt_partial_msg: (0.00s)
+[RUN ] grading_output::decrypt_symbols
+[----]   Plaintext contained only symbols.
+[PASS] grading_output::decrypt_symbols: (0.00s)
+[RUN ] grading_output::encrypt_EOM_only
+[----]   Ciphertext string has room only for EOM.
+[PASS] grading_output::encrypt_EOM_only: (0.00s)
+[RUN ] grading_output::encrypt_ciph_all_letters
+[----]   Ciphertext contains only letters.
+[PASS] grading_output::encrypt_ciph_all_letters: (0.00s)
+[RUN ] grading_output::encrypt_full_msg1
+[----]   A full plaintext message can be encrypted.
+[PASS] grading_output::encrypt_full_msg1: (0.00s)
+[RUN ] grading_output::encrypt_full_msg2
+[----]   A full plaintext message can be encrypted.
+[PASS] grading_output::encrypt_full_msg2: (0.00s)
+[RUN ] grading_output::encrypt_full_msg3
+[----]   A full plaintext message can be encrypted. Ciphertext starts with non-letter.
+[PASS] grading_output::encrypt_full_msg3: (0.00s)
+[RUN ] grading_output::encrypt_one_char
+[----]   Ciphertext string has room only for one character.
+[PASS] grading_output::encrypt_one_char: (0.00s)
+[RUN ] grading_output::encrypt_symbols
+[----]   Plaintext contains only symbols.
+[PASS] grading_output::encrypt_symbols: (0.00s)
+[====] Running 13 tests from grading_return:
+[RUN ] grading_return::decrypt_eom_in_middle
+[----]   EOM is in the middle of the ciphertext, with another one later in the ciphertext
+[PASS] grading_return::decrypt_eom_in_middle: (0.00s)
+[RUN ] grading_return::decrypt_full_msg1
+[----]   A full plaintext message was encrypted.
+[PASS] grading_return::decrypt_full_msg1: (0.00s)
+[RUN ] grading_return::decrypt_full_msg2
+[----]   A full plaintext message was encrypted.
+[PASS] grading_return::decrypt_full_msg2: (0.00s)
+[RUN ] grading_return::decrypt_full_msg3
+[----]   A full plaintext message was encrypted. Ciphertext starts with non-letters.
+[PASS] grading_return::decrypt_full_msg3: (0.00s)
+[RUN ] grading_return::decrypt_partial_msg
+[----]   The plaintext is not large enough to accommodate the entire ciphertext.
+[PASS] grading_return::decrypt_partial_msg: (0.00s)
+[RUN ] grading_return::decrypt_symbols
+[----]   Plaintext contained only symbols.
+[PASS] grading_return::decrypt_symbols: (0.00s)
+[RUN ] grading_return::encrypt_EOM_only
+[----]   Ciphertext string has room only for EOM.
+[PASS] grading_return::encrypt_EOM_only: (0.00s)
+[RUN ] grading_return::encrypt_ciph_all_letters
+[----]   Ciphertext contains only letters.
+[PASS] grading_return::encrypt_ciph_all_letters: (0.00s)
+[RUN ] grading_return::encrypt_full_msg1
+[----]   A full plaintext message can be encrypted.
+[PASS] grading_return::encrypt_full_msg1: (0.00s)
+[RUN ] grading_return::encrypt_full_msg2
+[----]   A full plaintext message can be encrypted.
+[PASS] grading_return::encrypt_full_msg2: (0.00s)
+[RUN ] grading_return::encrypt_full_msg3
+[----]   A full plaintext message can be encrypted. Ciphertext starts with non-letters.
+[PASS] grading_return::encrypt_full_msg3: (0.00s)
+[RUN ] grading_return::encrypt_one_char
+[----]   Ciphertext string has room only for one character.
+[PASS] grading_return::encrypt_one_char: (0.00s)
+[RUN ] grading_return::encrypt_symbols
+[----]   Plaintext contains only symbols.
+[PASS] grading_return::encrypt_symbols: (0.01s)
+[====] Running 13 tests from grading_valgrind:
+[RUN ] grading_valgrind::decrypt_eom_in_middle_valgrind
+[PASS] grading_valgrind::decrypt_eom_in_middle_valgrind: (0.55s)
+[RUN ] grading_valgrind::decrypt_full_msg1_valgrind
+[PASS] grading_valgrind::decrypt_full_msg1_valgrind: (0.54s)
+[RUN ] grading_valgrind::decrypt_full_msg2_valgrind
+[PASS] grading_valgrind::decrypt_full_msg2_valgrind: (0.57s)
+[RUN ] grading_valgrind::decrypt_full_msg3_valgrind
+[PASS] grading_valgrind::decrypt_full_msg3_valgrind: (0.56s)
+[RUN ] grading_valgrind::decrypt_partial_msg_valgrind
+[PASS] grading_valgrind::decrypt_partial_msg_valgrind: (0.57s)
+[RUN ] grading_valgrind::decrypt_symbols_valgrind
+[PASS] grading_valgrind::decrypt_symbols_valgrind: (0.57s)
+[RUN ] grading_valgrind::encrypt_EOM_only_valgrind
+[PASS] grading_valgrind::encrypt_EOM_only_valgrind: (0.49s)
+[RUN ] grading_valgrind::encrypt_ciph_all_letters_valgrind
+[PASS] grading_valgrind::encrypt_ciph_all_letters_valgrind: (0.56s)
+[RUN ] grading_valgrind::encrypt_full_msg1_valgrind
+[PASS] grading_valgrind::encrypt_full_msg1_valgrind: (0.51s)
+[RUN ] grading_valgrind::encrypt_full_msg2_valgrind
+[PASS] grading_valgrind::encrypt_full_msg2_valgrind: (0.54s)
+[RUN ] grading_valgrind::encrypt_full_msg3_valgrind
+[PASS] grading_valgrind::encrypt_full_msg3_valgrind: (0.51s)
+[RUN ] grading_valgrind::encrypt_one_char_valgrind
+[PASS] grading_valgrind::encrypt_one_char_valgrind: (0.57s)
+[RUN ] grading_valgrind::encrypt_symbols_valgrind
+[PASS] grading_valgrind::encrypt_symbols_valgrind: (0.53s)
+[----] Writing json report in `test_results.json`.
+[====] Synthesis: Tested: 66 | Passing: 65 | Failing: 1 | Crashing: 0 
