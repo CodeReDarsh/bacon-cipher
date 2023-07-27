@@ -138,7 +138,7 @@ It also checks for the error cases in the order provided. i.e., if two or more e
 
 # Notes
 
-Make sure you have [Valgrind](https://valgrind.org/) and Criterion with it's required dependencies installed in order to run the unit tests.
+Make sure you have [Valgrind](https://valgrind.org/) and [Criterion](https://criterion.readthedocs.io/en/master/setup.html) with it's required dependencies installed in order to run the unit tests.
 
 - To install valgrind enter the following command:
 
