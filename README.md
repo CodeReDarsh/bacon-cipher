@@ -1,6 +1,6 @@
 # Home-made Bacon Cipher 
 
-This is a small program that implements a my variant of [Bacon’s cipher](https://en.wikipedia.org/wiki/Bacon%27s_cipher). 
+This is a small program that implements my variant of [Bacon’s cipher](https://en.wikipedia.org/wiki/Bacon%27s_cipher). 
 
 In this version of Bacon’s cipher, I use 6-bit codes (“Bacon codes”) to represent uppercase letters, digits and various symbols. Refer to a table of the [ASCII codes](https://www.asciitable.com/) while reviewing the assigned codes below. The Bacon codes are not randomly assigned.
 
